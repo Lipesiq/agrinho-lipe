@@ -1,23 +1,175 @@
-class AgroForte:
-    def __init__(self, cultura, area_hectares, produtividade_media):
-        self.cultura = cultura
-        self.area_hectares = area_hectares
-        self.produtividade_media = produtividade_media
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte e Inovador</title>
+    <style>
+        :root {
+            --verde-claro: #E8F5E9;
+            --verde-forte: #2E7D32;
+            --verde-escuro: #1B5E20;
+            --amarelo: #F9A825;
+            --texto-cinza: #555555;
+            --fundo-claro: #F9F9F9;
+        }
 
-    def calcular_safra(self):
-        # Calcula a produção total estimada em toneladas
-        total_producao = self.area_hectares * self.produtividade_media
-        return total_producao
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    def exibir_relatorio(self):
-        producao = self.calcular_safra()
-        print(f"--- Relatório Agro Forte ---")
-        print(f"Cultura: {self.cultura}")
-        print(f"Área plantada: {self.area_hectares} hectares")
-        print(f"Produção estimada: {producao:,.2f} toneladas")
+        body {
+            background-color: var(--fundo-claro);
+            color: #333;
+        }
 
+        header {
+            background: linear-gradient(rgba(27, 94, 32, 0.9), rgba(46, 125, 50, 0.9)), url('https://unsplash.com') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
 
-# Exemplo de uso
-fazenda_cafe = AgroForte(cultura="Café Arábica", area_hectares=150, produtividade_media=2.5)
-fazenda_cafe.exibir_relatorio()
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .botao-destaque {
+            background-color: var(--amarelo);
+            color: var(--verde-escuro);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .botao-destaque:hover {
+            background-color: #fbc02d;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--verde-escuro);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: var(--verde-forte);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--texto-cinza);
+            line-height: 1.6;
+        }
+
+        section.tecnologia {
+            background-color: var(--verde-claro);
+        }
+
+        .cta {
+            background-color: var(--verde-escuro);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Agro Forte, Futuro Inovador</h1>
+        <p>A união entre a produção em larga escala e a tecnologia sustentável no campo.</p>
+        <a href="#pilares" class="botao-destaque">Descubra Nossos Pilares</a>
+    </header>
+
+    <section id="pilares" class="container">
+        <h2>Pilares do Campo Moderno</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Agro 4.0</h3>
+                <p>Uso de inteligência artificial, sensores de solo e drones para monitorar lavouras em tempo real, aumentando a precisão e reduzindo custos.</p>
+            </div>
+            <div class="card">
+                <h3>Sustentabilidade</h3>
+                <p>Práticas que respeitam o meio ambiente, como agricultura de baixo carbono e uso racional da água, equilibrando produção e conservação.</p>
+            </div>
+            <div class="card">
+                <h3>Gestão Inteligente</h3>
+                <p>Análise de dados climáticos e financeiros na palma da mão, garantindo decisões rápidas, assertivas e lucrativas para o produtor rural.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tecnologia">
+        <div class="container">
+            <h2>A Revolução da Agricultura Digital</h2>
+            <p style="font-size: 1.2rem; text-align: center; color: var(--texto-cinza); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                A tecnologia deixou de ser uma novidade para se tornar essencial. Desde o pequeno agricultor até os grandes complexos, a inovação permite produzir mais em menos espaço, preservando os recursos naturais.
+            </p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Faça parte da revolução do agronegócio</h2>
+        <p>Prepare a sua produção para o futuro com as ferramentas certas.</p>
+        <a href="#" class="botao-destaque" style="background-color: var(--amarelo); color: var(--verde-escuro);">Entrar em Contato</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Agro Forte e Inovador. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
 
