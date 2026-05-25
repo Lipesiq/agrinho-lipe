@@ -1,1 +1,23 @@
+class AgroForte:
+    def __init__(self, cultura, area_hectares, produtividade_media):
+        self.cultura = cultura
+        self.area_hectares = area_hectares
+        self.produtividade_media = produtividade_media
+
+    def calcular_safra(self):
+        # Calcula a produção total estimada em toneladas
+        total_producao = self.area_hectares * self.produtividade_media
+        return total_producao
+
+    def exibir_relatorio(self):
+        producao = self.calcular_safra()
+        print(f"--- Relatório Agro Forte ---")
+        print(f"Cultura: {self.cultura}")
+        print(f"Área plantada: {self.area_hectares} hectares")
+        print(f"Produção estimada: {producao:,.2f} toneladas")
+
+
+# Exemplo de uso
+fazenda_cafe = AgroForte(cultura="Café Arábica", area_hectares=150, produtividade_media=2.5)
+fazenda_cafe.exibir_relatorio()
 
